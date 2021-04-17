@@ -1,0 +1,64 @@
+
+.capmarkets-calculator {
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: 0 1.6rem;
+}
+
+.calculate-button {
+    background: #464b5e;
+    border: none;
+    border-bottom: .3rem solid darken(#464b5e, 10%);
+    color: white;
+    font-weight: 500;
+    padding: 1.2rem;
+}
+
+.inputfield {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.2rem;
+}
+
+.inputvalue {
+    padding: 5px; 
+    margin-left: 5px;
+    border: 2px solid #eee;
+    background: #464b5e;
+    color: white;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    border-radius:10px;
+}
+.inputselect {
+    padding: 5px; 
+    margin-left: 5px;
+    border: 2px solid #eee;
+    background: #464b5e;
+    color: white;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    border-radius:10px;
+}
+
+
+.inputerror {
+    color: red;
+    font-style: italic;
+    margin: 1.2rem 0 0 0; 
+    padding: 0 1.2rem;
+}
+
+.answerfield {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.2rem;
+}
+
+.answervalue {
+    padding: 5px; 
+    margin-left: 5px;
+    border: 2px solid #eee;
+    background: #464b5e;
+    color: white;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    border-radius:10px;
+}
