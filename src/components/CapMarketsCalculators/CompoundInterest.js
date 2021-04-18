@@ -63,6 +63,20 @@ class CompoundInterestCalculator extends BaseCalculator {
             futurevalue: this.formatCurrency(fv),
             rateofreturn: rr.toFixed(2) + "%"
         })
+        if (this.props.resultscallback) {
+            const results = {
+                inputs: {
+                    rate,
+                    compoundperiods,
+                    loanamount: parseFloat(this.state.loanamount)
+                },
+                results: {
+                    fv,
+                    rr
+                }
+            }
+            this.props.resultscallback(results)
+        }
     }
 
     // Lifecycle methods
@@ -109,7 +123,11 @@ class CompoundInterestCalculator extends BaseCalculator {
 
 CompoundInterestCalculator.defaultProps = {
     title: 'Compound Interest Calculator',
-    compounding: 'Monthly'
+    compounding: 'Monthly',
+    loanamount: '10000',
+    periods: '5',
+    interestrate: '4',
+    resultscallback: null
 }
 
 

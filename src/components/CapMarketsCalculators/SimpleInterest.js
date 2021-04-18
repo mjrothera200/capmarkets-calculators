@@ -48,6 +48,20 @@ class SimpleInterestCalculator extends BaseCalculator {
             futurevalue: this.formatCurrency(fv),
             rateofreturn: rr.toFixed(2) + "%"
         })
+        if (this.props.resultscallback) {
+            const results = {
+                inputs: {
+                    rate,
+                    periods: parseInt(this.state.periods),
+                    loanamount: parseFloat(this.state.loanamount)
+                },
+                results: {
+                    fv,
+                    rr
+                }
+            }
+            this.props.resultscallback(results)
+        }
     }
 
     // Lifecycle methods
@@ -86,7 +100,11 @@ class SimpleInterestCalculator extends BaseCalculator {
 
 
 SimpleInterestCalculator.defaultProps = {
-    title: 'Simple Interest Calculator'
+    title: 'Simple Interest Calculator',
+    loanamount: '10000',
+    periods: '5',
+    interestrate: '4',
+    resultscallback: null
 }
 
 
