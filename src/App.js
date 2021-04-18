@@ -1,7 +1,7 @@
 
 import './App.css';
 import React, { Component } from 'react';
-import { SimpleInterestCalculator, CompoundInterestCalculator } from './components/CapMarketsCalculators'
+import { SimpleInterestCalculator, CompoundInterestCalculator, BondPriceCalculator } from './components/CapMarketsCalculators'
 
 class App extends Component {
 
@@ -18,8 +18,7 @@ class App extends Component {
   return (
     <div className="App">
       <header className="App-header">
-        <SimpleInterestCalculator 
-          resultscallback={this.results}
+        <BondPriceCalculator 
         />
       </header>
     </div>

@@ -92,7 +92,7 @@ class CompoundInterestCalculator extends BaseCalculator {
     render() {
         return (
             <div className="capmarkets-calculator">
-                <p>{this.state.title}</p>
+                {this.state.title && <p>{this.state.title}</p>}
                 { this.state.error && <div className="inputerror">{this.state.error}</div>}
                 <form onSubmit={this.handleSubmit}>
                     <div className="inputfield"> Loan Amount:&nbsp;
@@ -111,7 +111,7 @@ class CompoundInterestCalculator extends BaseCalculator {
                             <option value="Monthly">Monthly</option>
                         </select>
                     </div>
-                    <input className="calculate-button" type="submit" value="Submit" />
+                    <input className="calculate-button" type="submit" value="Calculate" />
                 </form>
                 <div className="answerfield">Future Value:&nbsp;<div className="answervalue">{this.state.futurevalue}</div></div>
                 <div className="answerfield">Rate of Return:&nbsp;<div className="answervalue">{this.state.rateofreturn}</div></div>
